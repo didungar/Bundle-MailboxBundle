@@ -1,0 +1,22 @@
+{% extends 'ShootthemShootthemBundle:Default:layout.html.twig' %}
+
+
+{% block body %}
+<h3>Mail-box :</h3>
+La boite aux lettres contient {{oInfo.Nmsgs}} message(s) dont  {{oInfo.Recent}} recent(s).
+<ul>
+	<li ng-repeat="oMail in aMails">
+		{{ '{{oMail.from}}' }} ) {{ '{{oMail.subject}}' }} {{ '{{oMail.date}}' }}
+	</li>
+</ul>
+
+<script>
+	var shootthemApp = angular.module('shootthemApp', []);
+
+	shootthemApp.controller('shootthemCtrl', function ($scope) {
+		$scope.aMails = {% autoescape false %}{{ sMails }}{% endautoescape %};
+	});
+
+</script>
+
+{% endblock %}
