@@ -10,5 +10,10 @@
     ],
     "autoload": {
         "classmap": ["src/"]
+    },
+    "extra": {
+        "branch-alias": {
+            "master": "1"
+        }
     }
 }
