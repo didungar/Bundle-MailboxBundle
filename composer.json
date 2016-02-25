@@ -1,0 +1,13 @@
+{
+    "name": "DidUngar/bundle-mailboxbundle",
+    "description": "Bundle for read mail, like in mailbox.",
+    "authors": [
+        {
+            "name": "Didier Ungar",
+            "email": "didungar@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": ["src/DidUngar/"]
+    }
+}
