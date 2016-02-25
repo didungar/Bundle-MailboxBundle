@@ -1,5 +1,6 @@
 {
     "name": "DidUngar/bundle-mailboxbundle",
+    "type": "library",
     "description": "Bundle for read mail, like in mailbox.",
     "authors": [
         {
