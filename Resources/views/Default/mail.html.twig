@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<h3>Mail N°{{uid_mail}} :</h3>
+{% autoescape false %}{{ sMail }}{% endautoescape %}
+
+<script>
+	var shootthemApp = angular.module('shootthemApp', []);
+
+	shootthemApp.controller('shootthemCtrl', function ($scope) {
+	});
+
+</script>
+
+{% endblock %}

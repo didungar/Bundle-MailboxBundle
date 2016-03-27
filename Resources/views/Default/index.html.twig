@@ -6,7 +6,7 @@
 La boite aux lettres contient {{oInfo.Nmsgs}} message(s) dont  {{oInfo.Recent}} recent(s).
 <ul>
 	<li ng-repeat="oMail in aMails">
-		{{ '{{oMail.from}}' }} ) {{ '{{oMail.subject}}' }} {{ '{{oMail.date}}' }}
+		<a href="/mailbox/mail-{{'{{oMail.uid}}'}}">{{'{{oMail.uid}}'}}</a> - {{ '{{oMail.from}}' }} ) {{ '{{oMail.subject}}' }} {{ '{{oMail.date}}' }}
 	</li>
 </ul>
 
