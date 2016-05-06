@@ -2,6 +2,7 @@
 
 
 {% block body %}
+<section ng-controller="mailbundleCtrl">
 <h3>Mail-box :</h3>
 La boite aux lettres contient {{oInfo.Nmsgs}} message(s) dont  {{oInfo.Recent}} recent(s).
 <ul>
@@ -9,11 +10,12 @@ La boite aux lettres contient {{oInfo.Nmsgs}} message(s) dont  {{oInfo.Recent}} 
 		<a href="/mailbox/mail-{{'{{oMail.uid}}'}}">{{'{{oMail.uid}}'}}</a> - {{ '{{oMail.from}}' }} ) {{ '{{oMail.subject}}' }} {{ '{{oMail.date}}' }}
 	</li>
 </ul>
+</section>
 
 <script>
-	var shootthemApp = angular.module('shootthemApp', []);
+	var ngApp = angular.module('ngApp', []);
 
-	shootthemApp.controller('shootthemCtrl', function ($scope) {
+	ngApp.controller('mailbundleCtrl', function ($scope) {
 		$scope.aMails = {% autoescape false %}{{ sMails }}{% endautoescape %};
 	});
 
