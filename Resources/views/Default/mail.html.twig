@@ -2,13 +2,15 @@
 
 
 {% block body %}
+<section ng-controller="mailbundleCtrl">
 <h3>Mail N°{{uid_mail}} :</h3>
 {% autoescape false %}{{ sMail }}{% endautoescape %}
+</section>
 
 <script>
-	var shootthemApp = angular.module('shootthemApp', []);
+	var ngApp = angular.module('ngApp', []);
 
-	shootthemApp.controller('shootthemCtrl', function ($scope) {
+	ngApp.controller('mailbundleCtrl', function ($scope) {
 	});
 
 </script>
